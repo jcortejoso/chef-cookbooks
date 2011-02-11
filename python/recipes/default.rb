@@ -16,6 +16,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+
+package "libapache2-mod-wsgi" do
+  action :install
+end
+
 package "python2.6" do
   action :install
 end
@@ -24,8 +29,8 @@ end
   dev imaging matplotlib matplotlib-data matplotlib-doc mysqldb 
   numpy numpy-ext paramiko scipy setuptools sqlite scons mako
   openid dateutil twill psycopg2 babel cherrypy3 django jinja
-  virtualenv werkzeug boto pip libapache2-mod-wsgi coverage
-  lxml paver processing nose mox
+  virtualenv werkzeug boto pip coverage
+  lxml paver processing nose mox lxml-dbg
 }.each do |pkg|
   package "python-#{pkg}" do
     action :install
