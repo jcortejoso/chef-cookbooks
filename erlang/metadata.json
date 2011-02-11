@@ -1,43 +1,36 @@
 {
-  "maintainer": "Opscode, Inc.",
-  "description": "Installs erlang",
-  "recommendations": {
+    "providing": {
+    },
+    "attributes": {
+    },
+    "replacing": {
+    },
+    "dependencies": {
+    },
+    "groupings": {
+    },
+    "recommendations": {
+    },
+    "platforms": {
+      "debian": [
 
-  },
-  "maintainer_email": "cookbooks@opscode.com",
-  "recipes": {
-    "erlang": ""
-  },
-  "suggestions": {
+      ],
+      "ubuntu": [
 
-  },
-  "platforms": {
-    "ubuntu": [
-
-    ],
-    "debian": [
-
-    ]
-  },
-  "version": "0.7.0",
-  "name": "erlang",
-  "conflicting": {
-
-  },
-  "attributes": {
-
-  },
-  "providing": {
-    "erlang": [
-
-    ]
-  },
-  "license": "Apache 2.0",
-  "long_description": "",
-  "replacing": {
-
-  },
-  "dependencies": {
-
+      ]
+    },
+    "license": "Apache 2.0",
+    "version": "0.8.2",
+    "maintainer": "Opscode, Inc.",
+    "suggestions": {
+    },
+    "recipes": {
+      "erlang": "Installs erlang"
+    },
+    "maintainer_email": "cookbooks@opscode.com",
+    "name": "erlang",
+    "conflicting": {
+    },
+    "description": "Installs erlang, optionally install GUI tools.",
+    "long_description": ""
   }
-}

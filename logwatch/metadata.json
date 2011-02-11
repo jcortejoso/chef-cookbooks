@@ -1,51 +1,45 @@
 {
-  "maintainer": "Opscode, Inc.",
-  "description": "Installs logwatch, a nice log analyzer",
-  "recommendations": {
+    "recommendations": {
+    },
+    "attributes": {
+    },
+    "maintainer": "Opscode, Inc.",
+    "suggestions": {
+    },
+    "dependencies": {
+      "perl": [
 
-  },
-  "maintainer_email": "cookbooks@opscode.com",
-  "recipes": {
-    "logwatch": ""
-  },
-  "suggestions": {
+      ]
+    },
+    "maintainer_email": "cookbooks@opscode.com",
+    "conflicting": {
+    },
+    "platforms": {
+      "debian": [
 
-  },
-  "platforms": {
-    "ubuntu": [
+      ],
+      "centos": [
 
-    ],
-    "centos": [
+      ],
+      "ubuntu": [
 
-    ],
-    "debian": [
+      ],
+      "redhat": [
 
-    ],
-    "redhat": [
-
-    ]
-  },
-  "version": "0.1.0",
-  "name": "logwatch",
-  "conflicting": {
-
-  },
-  "attributes": {
-
-  },
-  "providing": {
-    "logwatch": [
-
-    ]
-  },
-  "license": "Apache 2.0",
-  "long_description": "= DESCRIPTION:\n\n= REQUIREMENTS:\n\n= ATTRIBUTES: \n\n= USAGE:\n\n",
-  "replacing": {
-
-  },
-  "dependencies": {
-    "perl": [
-
-    ]
+      ]
+    },
+    "license": "Apache 2.0",
+    "version": "0.1.1",
+    "providing": {
+    },
+    "recipes": {
+      "logwatch": "Installs logwatch"
+    },
+    "replacing": {
+    },
+    "name": "logwatch",
+    "description": "Installs logwatch, a nice log analyzer",
+    "groupings": {
+    },
+    "long_description": "= DESCRIPTION:\n\n= REQUIREMENTS:\n\n= ATTRIBUTES: \n\n= USAGE:\n\n"
   }
-}

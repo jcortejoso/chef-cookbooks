@@ -1,57 +1,51 @@
 {
-  "maintainer": "Opscode, Inc.",
-  "description": "Installs and configures redmine as a Rails app in passenger+apache2",
-  "recommendations": {
+    "providing": {
+    },
+    "attributes": {
+    },
+    "replacing": {
+    },
+    "dependencies": {
+      "rails": [
 
-  },
-  "maintainer_email": "cookbooks@opscode.com",
-  "recipes": {
-    "redmine": ""
-  },
-  "suggestions": {
+      ],
+      "mysql": [
 
-  },
-  "platforms": {
-    "ubuntu": [
+      ],
+      "passenger_apache2": [
 
-    ],
-    "debian": [
+      ],
+      "sqlite": [
 
-    ]
-  },
-  "version": "0.8.0",
-  "name": "redmine",
-  "conflicting": {
+      ],
+      "apache2": [
 
-  },
-  "attributes": {
+      ]
+    },
+    "groupings": {
+    },
+    "recommendations": {
+    },
+    "platforms": {
+      "debian": [
 
-  },
-  "providing": {
-    "redmine": [
+      ],
+      "ubuntu": [
 
-    ]
-  },
-  "license": "Apache 2.0",
-  "long_description": "",
-  "replacing": {
-
-  },
-  "dependencies": {
-    "rails": [
-
-    ],
-    "mysql": [
-
-    ],
-    "passenger_apache2": [
-
-    ],
-    "sqlite": [
-
-    ],
-    "apache2": [
-
-    ]
+      ]
+    },
+    "license": "Apache 2.0",
+    "version": "0.10.3",
+    "maintainer": "Opscode, Inc.",
+    "suggestions": {
+    },
+    "recipes": {
+      "redmine": "Installs and configures redmine under passenger + apache2"
+    },
+    "maintainer_email": "cookbooks@opscode.com",
+    "name": "redmine",
+    "conflicting": {
+    },
+    "description": "Installs and configures redmine as a Rails app in passenger+apache2",
+    "long_description": ""
   }
-}

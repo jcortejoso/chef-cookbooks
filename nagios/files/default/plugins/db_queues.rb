@@ -34,12 +34,6 @@ Choice.options do
     short '-H'
     long '--host=VALUE'
     desc 'MySQL DB host'
-  end
-
-  option :port do
-    short '-P'
-    long '--port=VALUE'
-    desc 'MySQL DB port'
   end    
 
   option :username do
@@ -78,7 +72,7 @@ message = "Query '#{c[:query]}' result %d exceeds %d|#{perfdata}"
 
 if c[:warn] && c[:crit]
   
-  conn = Mysql::connect(c[:host], c[:username], c[:password], c[:database], c[:port].to_i)
+  conn = Mysql::connect(c[:host], c[:username], c[:password], c[:database])
   res = conn.query(c[:query])
   value = res.fetch_row
   value = value.first.to_i

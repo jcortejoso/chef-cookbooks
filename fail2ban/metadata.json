@@ -1,43 +1,36 @@
 {
-  "maintainer": "Opscode, Inc.",
-  "description": "Installs and configures fail2ban",
-  "recommendations": {
+    "recommendations": {
+    },
+    "attributes": {
+    },
+    "maintainer": "Opscode, Inc.",
+    "suggestions": {
+    },
+    "dependencies": {
+    },
+    "maintainer_email": "cookbooks@opscode.com",
+    "conflicting": {
+    },
+    "platforms": {
+      "debian": [
 
-  },
-  "maintainer_email": "cookbooks@opscode.com",
-  "recipes": {
-    "fail2ban": ""
-  },
-  "suggestions": {
+      ],
+      "ubuntu": [
 
-  },
-  "platforms": {
-    "ubuntu": [
-
-    ],
-    "debian": [
-
-    ]
-  },
-  "version": "0.7.0",
-  "name": "fail2ban",
-  "conflicting": {
-
-  },
-  "attributes": {
-
-  },
-  "providing": {
-    "fail2ban": [
-
-    ]
-  },
-  "license": "Apache 2.0",
-  "long_description": "",
-  "replacing": {
-
-  },
-  "dependencies": {
-
+      ]
+    },
+    "license": "Apache 2.0",
+    "version": "0.7.1",
+    "providing": {
+    },
+    "recipes": {
+      "fail2ban": "Installs and configures fail2ban"
+    },
+    "replacing": {
+    },
+    "name": "fail2ban",
+    "description": "Installs and configures fail2ban",
+    "groupings": {
+    },
+    "long_description": ""
   }
-}

@@ -23,7 +23,10 @@ root_group = value_for_platform(
   "default" => "root"
 )
 
-node[:apache][:listen_ports] << "444" unless node[:apache][:listen_ports].include?("444")
+node[:apache][:listen_ports] << "443" unless node[:apache][:listen_ports].include?("443")
+if node[:chef][:webui_enabled]
+  node[:apache][:listen_ports] << "444" unless node[:apache][:listen_ports].include?("444")
+end
 
 include_recipe "chef::server"
 include_recipe "apache2"
@@ -50,7 +53,7 @@ bash "Create SSL Certificates" do
   openssl req -subj "#{node[:chef][:server_ssl_req]}" -new -x509 -nodes -sha1 -days 3650 -key #{node[:chef][:server_fqdn]}.key > #{node[:chef][:server_fqdn]}.crt
   cat #{node[:chef][:server_fqdn]}.key #{node[:chef][:server_fqdn]}.crt > #{node[:chef][:server_fqdn]}.pem
   EOH
-  not_if { File.exists?("/etc/chef/certificates/#{node[:chef][:server_fqdn]}.pem") }
+  not_if { ::File.exists?("/etc/chef/certificates/#{node[:chef][:server_fqdn]}.pem") }
 end
 
 web_app "chef_server" do

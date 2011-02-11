@@ -11,50 +11,22 @@ define contact {
 }
 
 define contactgroup {
-  contactgroup_name       admins
-  alias                   Nagios Administrators
-  members                 root
+  contactgroup_name admins
+  alias             Nagios Administrators
+  members           <%= @members.join(',') %>
 }
 
 define contactgroup {
-	contactgroup_name		sysadmin
-	alias					Sysadmins
+  contactgroup_name admins-sms
+  alias             Sysadmin SMS
+  members           <%= @members.join(',') %>
 }
 
-define contactgroup {
-	contactgroup_name		sysadmin-sms
-	alias					Sysadmin SMS
+<% @admins.each do |a| -%>
+define contact {
+  use          default-contact
+  contact_name <%= a['id'] %>
+  email        <%= a['nagios']['email'] %>
 }
 
-
-define contact{
-  use			 generic-contact
-  contact_name admin
-  alias 		 Admin
-  email 		 admin@example.com
-  pager		 12345678
-  address1	admin@example.com
-  contactgroups	admins
-}
-
-define contact{
-  contact_name admin-sms
-  use			 sms-contact
-  alias 		 Admin
-  email 		 admin@example.com
-  pager		 12345678
-  address1	admin@example.com
-  contactgroups	sysadmin-sms
-  service_notification_commands service-notify-by-sms-gateway
-  host_notification_commands host-notify-by-sms-gateway
-}
-
-define contact{
-  contact_name campfire
-  use			 generic-contact
-  alias 		 Campfire
-  service_notification_commands   service-notify-by-campfire
-  host_notification_commands      host-notify-by-campfire
-  email 		 monitoring@example.com
-  contactgroups	admins
-}
+<% end -%>

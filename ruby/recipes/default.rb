@@ -2,7 +2,7 @@
 # Cookbook Name:: ruby
 # Recipe:: default
 #
-# Copyright 2008-2009, Opscode, Inc.
+# Copyright 2010, FindsYou Limited
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,33 +17,4 @@
 # limitations under the License.
 #
 
-package "ruby" do
-  action :install
-end
-
-extra_packages = case node[:platform]
-  when "ubuntu","debian"
-    %w{
-      ruby1.8
-      ruby1.8-dev
-      rdoc1.8
-      ri1.8
-      libopenssl-ruby
-    }
-  when "centos","redhat","fedora"
-    %w{
-      ruby-libs
-      ruby-devel
-      ruby-docs
-      ruby-ri
-      ruby-irb
-      ruby-rdoc
-      ruby-mode
-    }
-  end
-
-extra_packages.each do |pkg|
-  package pkg do
-    action :install
-  end
-end
+ruby_packages node[:languages][:ruby][:default_version] || "1.8"

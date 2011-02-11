@@ -60,29 +60,29 @@ if [ -n "$int_warn" -a -n "$int_crit" ]; then
   if (( $err == 0 )); then
 
     if [ "$perform" = "yes" ]; then
-      echo "OK - $OUTPUTP"
+      echo "MEM OK - $OUTPUTP"
       exit "$err"
     else
-      echo "OK - $OUTPUT"
+      echo "MEM OK - $OUTPUT"
       exit "$err"
     fi
 
   elif (( $err == 1 )); then
     if [ "$perform" = "yes" ]; then
-      echo "WARNING - $OUTPUTP"
+      echo "MEM WARNING - $OUTPUTP"
       exit "$err"
     else
-      echo "WARNING - $OUTOUT"
+      echo "MEM WARNING - $OUTOUT"
       exit "$err"
     fi
 
   elif (( $err == 2 )); then
     
     if [ "$perform" = "yes" ]; then
-      echo "CRITICAL - $OUTPUTP"
+      echo "MEM CRITICAL - $OUTPUTP"
       exit "$err"
     else
-      echo "CRITICAL - $OUTPUT"
+      echo "MEM CRITICAL - $OUTPUT"
       exit "$err"
     fi
 

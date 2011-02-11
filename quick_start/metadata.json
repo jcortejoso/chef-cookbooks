@@ -1,74 +1,71 @@
 {
-  "maintainer": "Opscode, Inc.",
-  "description": "Example cookbook for quick_start wiki document",
-  "recommendations": {
+    "recommendations": {
+    },
+    "attributes": {
+      "quick_start/deep_thought": {
+        "required": "optional",
+        "calculated": false,
+        "choice": [
 
-  },
-  "maintainer_email": "cookbooks@opscode.com",
-  "recipes": {
-    "quick_start": ""
-  },
-  "suggestions": {
+        ],
+        "default": "If a tree falls in the forest...",
+        "type": "string",
+        "recipes": [
 
-  },
-  "platforms": {
-    "solaris": [
-
-    ],
-    "freebsd": [
-
-    ],
-    "ubuntu": [
-
-    ],
-    "openbsd": [
-
-    ],
-    "fedora": [
-
-    ],
-    "macosx": [
-
-    ],
-    "centos": [
-
-    ],
-    "debian": [
-
-    ],
-    "redhat": [
-
-    ]
-  },
-  "version": "0.7.0",
-  "name": "quick_start",
-  "conflicting": {
-
-  },
-  "attributes": {
-    "quick_start\/deep_thought": {
-      "default": "If a tree falls in the forest...",
-      "type": "string",
-      "multiple_values": false,
-      "description": "A deep thought",
-      "display_name": "Quick Start Deep Thought",
-      "recipes": [
+        ],
+        "description": "A deep thought",
+        "display_name": "Quick Start Deep Thought"
+      }
+    },
+    "maintainer": "Opscode, Inc.",
+    "suggestions": {
+    },
+    "dependencies": {
+    },
+    "maintainer_email": "cookbooks@opscode.com",
+    "conflicting": {
+    },
+    "platforms": {
+      "openbsd": [
 
       ],
-      "required": false
-    }
-  },
-  "providing": {
-    "quick_start": [
+      "debian": [
 
-    ]
-  },
-  "license": "Apache 2.0",
-  "long_description": "",
-  "replacing": {
+      ],
+      "solaris": [
 
-  },
-  "dependencies": {
+      ],
+      "centos": [
 
+      ],
+      "fedora": [
+
+      ],
+      "macosx": [
+
+      ],
+      "freebsd": [
+
+      ],
+      "ubuntu": [
+
+      ],
+      "redhat": [
+
+      ]
+    },
+    "license": "Apache 2.0",
+    "version": "0.8.0",
+    "providing": {
+    },
+    "recipes": {
+      "quick_start": "Quick start example cookbook"
+    },
+    "replacing": {
+    },
+    "name": "quick_start",
+    "description": "Example cookbook for quick_start wiki document",
+    "groupings": {
+    },
+    "long_description": ""
   }
-}

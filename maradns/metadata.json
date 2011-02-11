@@ -1,63 +1,63 @@
 {
-  "maintainer": "Opscode, Inc.",
-  "description": "Installs and configures maradns",
-  "recommendations": {
-
-  },
-  "maintainer_email": "cookbooks@opscode.com",
-  "recipes": {
-    "maradns": ""
-  },
-  "suggestions": {
-
-  },
-  "platforms": {
-    "ubuntu": [
-
-    ],
-    "debian": [
-
-    ]
-  },
-  "version": "0.7.0",
-  "name": "maradns",
-  "conflicting": {
-
-  },
-  "attributes": {
-    "maradns\/recursive_acl": {
-      "default": "",
-      "type": "string",
-      "multiple_values": false,
-      "description": "Sets the recursive_acl setting in mararc.erb",
-      "display_name": "MaraDNS Recursive ACL",
-      "recipes": [
-
-      ],
-      "required": false
+    "providing": {
     },
-    "maradns": {
-      "type": "hash",
-      "multiple_values": false,
-      "description": "Hash of MaraDNS attributes",
-      "display_name": "MaraDNS",
-      "recipes": [
+    "attributes": {
+      "maradns": {
+        "required": "optional",
+        "calculated": false,
+        "choice": [
+
+        ],
+        "type": "hash",
+        "recipes": [
+
+        ],
+        "description": "Hash of MaraDNS attributes",
+        "display_name": "MaraDNS"
+      },
+      "maradns/recursive_acl": {
+        "required": "optional",
+        "calculated": false,
+        "choice": [
+
+        ],
+        "default": "",
+        "type": "string",
+        "recipes": [
+
+        ],
+        "description": "Sets the recursive_acl setting in mararc.erb",
+        "display_name": "MaraDNS Recursive ACL"
+      }
+    },
+    "replacing": {
+    },
+    "dependencies": {
+    },
+    "groupings": {
+    },
+    "recommendations": {
+    },
+    "platforms": {
+      "debian": [
 
       ],
-      "required": false
-    }
-  },
-  "providing": {
-    "maradns": [
+      "ubuntu": [
 
-    ]
-  },
-  "license": "Apache 2.0",
-  "long_description": "",
-  "replacing": {
-
-  },
-  "dependencies": {
-
+      ]
+    },
+    "license": "Apache 2.0",
+    "version": "0.8.1",
+    "maintainer": "Opscode, Inc.",
+    "suggestions": {
+    },
+    "recipes": {
+      "maradns": "Installs and configures maradns"
+    },
+    "maintainer_email": "cookbooks@opscode.com",
+    "name": "maradns",
+    "conflicting": {
+    },
+    "description": "Installs and configures maradns",
+    "long_description": ""
   }
-}
