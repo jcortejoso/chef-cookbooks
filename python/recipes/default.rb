@@ -19,7 +19,7 @@
 
 
 %w{
-  libapache2-mod-wsgi python2.6 scons babel
+  libapache2-mod-wsgi python2.6 scons
 }.each do |pkg|
   package "#{pkg}" do
     action :install
