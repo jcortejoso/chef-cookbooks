@@ -21,14 +21,14 @@
 %w{
   libapache2-mod-wsgi python2.6 scons babel
 }.each do |pkg|
-  
+  action :install
 end
 
 # processing
 %w{ 
   dev imaging matplotlib matplotlib-data matplotlib-doc mysqldb 
   numpy numpy-ext paramiko scipy setuptools sqlite mako
-  openid dateutil twill psycopg2 cherrypy3 django jinja
+  openid dateutil twill psycopg2 cherrypy3 django jinja2
   virtualenv werkzeug boto pip coverage
   lxml paver nose mox lxml-dbg
 }.each do |pkg|
