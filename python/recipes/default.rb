@@ -17,20 +17,20 @@
 # limitations under the License.
 #
 
-package "libapache2-mod-wsgi" do
-  action :install
+
+%w{
+  libapache2-mod-wsgi python2.6 scons babel
+}.each do |pkg|
+  
 end
 
-package "python2.6" do
-  action :install
-end
-
+# processing
 %w{ 
   dev imaging matplotlib matplotlib-data matplotlib-doc mysqldb 
-  numpy numpy-ext paramiko scipy setuptools sqlite scons mako
-  openid dateutil twill psycopg2 babel cherrypy3 django jinja
+  numpy numpy-ext paramiko scipy setuptools sqlite mako
+  openid dateutil twill psycopg2 cherrypy3 django jinja
   virtualenv werkzeug boto pip coverage
-  lxml paver processing nose mox lxml-dbg
+  lxml paver nose mox lxml-dbg
 }.each do |pkg|
   package "python-#{pkg}" do
     action :install
