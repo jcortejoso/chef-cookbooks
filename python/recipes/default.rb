@@ -21,7 +21,9 @@
 %w{
   libapache2-mod-wsgi python2.6 scons babel
 }.each do |pkg|
-  action :install
+  package "#{pkg}" do
+    action :install
+  end
 end
 
 # processing
