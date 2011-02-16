@@ -28,8 +28,6 @@ end
 
 puts "postgresql-#{node.postgresql.version}"
 
-package "postgresql"
-
 service "postgresql" do
   service_name "postgresql-#{node.postgresql.version}"
   supports :restart => true, :status => true, :reload => true
@@ -51,3 +49,5 @@ template "#{node[:postgresql][:dir]}/postgresql.conf" do
   mode 0600
   notifies :restart, resources(:service => "postgresql")
 end
+
+package "postgresql"
