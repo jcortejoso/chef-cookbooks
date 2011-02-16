@@ -18,7 +18,7 @@
 #
 
 include_recipe "postgresql::client"
-node[:postgresql][:version] = '8.3'
+
 case node[:postgresql][:version]
 when "8.3"
   node.default[:postgresql][:ssl] = "off"
@@ -29,7 +29,7 @@ end
 package "postgresql"
 
 service "postgresql" do
-  service_name "postgresql-#{node.postgresql.version}"
+  service_name "postgresql-8.3"
   supports :restart => true, :status => true, :reload => true
   action :nothing
 end
