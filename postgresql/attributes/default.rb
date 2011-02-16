@@ -39,30 +39,32 @@ when "ubuntu"
 
 when "fedora"
 
-  if platform_version.to_f <= 12
-    default[:postgresql][:version] = "8.3"
-  else
-    default[:postgresql][:version] = "8.4"
-  end
-
+  # if platform_version.to_f <= 12
+  #   default[:postgresql][:version] = "8.3"
+  # else
+  #   default[:postgresql][:version] = "8.4"
+  # end
+  
+  default[:postgresql][:version] = "8.3"
   set[:postgresql][:dir] = "/var/lib/pgsql/data"
 
 when "redhat","centos"
 
-  default[:postgresql][:version] = "8.4"
+  default[:postgresql][:version] = "8.3" # TODO: 8.4
   set[:postgresql][:dir] = "/var/lib/pgsql/data"
 
 when "suse"
 
-  if platform_version.to_f <= 11.1
-    default[:postgresql][:version] = "8.3"
-  else
-    default[:postgresql][:version] = "8.4"
-  end
-
+  # if platform_version.to_f <= 11.1
+  #   default[:postgresql][:version] = "8.3"
+  # else
+  #   default[:postgresql][:version] = "8.4"
+  # end
+  default[:postgresql][:version] = "8.3"
   set[:postgresql][:dir] = "/var/lib/pgsql/data"
 
 else
-  default[:postgresql][:version] = "8.4"
+  # default[:postgresql][:version] = "8.4"
+  default[:postgresql][:version]    = "8.3"
   set[:postgresql][:dir]            = "/etc/postgresql/#{node[:postgresql][:version]}/main"
 end
