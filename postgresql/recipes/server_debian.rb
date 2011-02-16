@@ -26,10 +26,12 @@ when "8.4"
   node.default[:postgresql][:ssl] = "true"
 end
 
+puts "postgresql-#{node.postgresql.version}"
+
 package "postgresql"
 
 service "postgresql" do
-  service_name "postgresql-8.3"
+  service_name "postgresql-#{node.postgresql.version}"
   supports :restart => true, :status => true, :reload => true
   action :nothing
 end
