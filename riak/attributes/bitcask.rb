@@ -16,7 +16,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
+include_attribute "riak::kv"
 if node.riak.kv.storage_backend == :riak_kv_bitcask_backend   
   default.riak.bitcask.data_root = "/var/lib/riak/bitcask"  
   default.riak.bitcask.max_file_size = 2147483648

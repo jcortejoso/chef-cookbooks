@@ -18,12 +18,12 @@
 #
 case platform
 when "debian"
-
-  if platform_version.to_f == 5.0
-    default[:postgresql][:version] = "8.3"
-  elsif platform_version =~ /.*sid/
-    default[:postgresql][:version] = "8.4"
-  end
+  default[:postgresql][:version] = "8.3"
+  # if platform_version.to_f == 5.0
+  #   default[:postgresql][:version] = "8.3"
+  # elsif platform_version =~ /.*sid/
+  #   default[:postgresql][:version] = "8.4"
+  # end
 
   set[:postgresql][:dir] = "/etc/postgresql/#{node[:postgresql][:version]}/main"
 

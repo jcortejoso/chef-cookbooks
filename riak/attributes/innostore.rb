@@ -16,7 +16,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
+include_attribute "riak::kv"
 if node.riak.kv.storage_backend == :riak_kv_innostore_backend
   default.riak.innostore.log_buffer_size = 8388608
   default.riak.innostore.log_files_in_group = 8
