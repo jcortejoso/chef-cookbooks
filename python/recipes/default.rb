@@ -32,7 +32,7 @@ end
   numpy numpy-ext paramiko scipy setuptools sqlite mako
   openid dateutil twill psycopg2 cherrypy3 django jinja2
   virtualenv werkzeug boto pip coverage
-  lxml paver nose mox lxml-dbg
+  lxml nose mox lxml-dbg
 }.each do |pkg|
   package "python-#{pkg}" do
     action :install
