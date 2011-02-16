@@ -16,7 +16,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-puts "Version: #{default[:postgresql][:version]}"
+puts "Version: #{default[:postgresql].inspect}"
 case platform
 when "debian"
   default[:postgresql][:version] = "8.3"
@@ -69,3 +69,5 @@ else
   default[:postgresql][:version]    = "8.3"
   set[:postgresql][:dir]            = "/etc/postgresql/#{node[:postgresql][:version]}/main"
 end
+
+puts "Version: #{default[:postgresql].inspect}"
