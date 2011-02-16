@@ -26,7 +26,7 @@ when "8.4"
   node.default[:postgresql][:ssl] = "true"
 end
 
-puts "postgresql-#{node.postgresql.version}"
+package "postgresql-8.3"
 
 service "postgresql" do
   service_name "postgresql-#{node.postgresql.version}"
@@ -49,5 +49,3 @@ template "#{node[:postgresql][:dir]}/postgresql.conf" do
   mode 0600
   notifies :restart, resources(:service => "postgresql")
 end
-
-package "postgresql"
