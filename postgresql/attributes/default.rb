@@ -16,6 +16,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+puts "Version: #{default[:postgresql][:version]}"
 case platform
 when "debian"
   default[:postgresql][:version] = "8.3"
