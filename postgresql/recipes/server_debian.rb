@@ -18,7 +18,7 @@
 #
 
 include_recipe "postgresql::client"
-
+node[:postgresql][:version] = '8.3'
 case node[:postgresql][:version]
 when "8.3"
   node.default[:postgresql][:ssl] = "off"
