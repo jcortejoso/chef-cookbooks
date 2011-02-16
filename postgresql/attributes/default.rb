@@ -30,7 +30,7 @@ when "debian"
 
 when "ubuntu"
   # default[:postgresql][:version] = "8.3"
-  if platform_version.to_f <= 9.04
+  if platform_version.to_f <= 10.10
     default[:postgresql][:version] = "8.3"
   else
     default[:postgresql][:version] = "8.4"
