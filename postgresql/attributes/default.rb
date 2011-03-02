@@ -19,7 +19,6 @@
 
 case platform
 when "debian"
-  # default[:postgresql][:version] = "8.3"
   if platform_version.to_f == 5.0
     default[:postgresql][:version] = "8.3"
   elsif platform_version =~ /.*sid/
@@ -29,7 +28,6 @@ when "debian"
   set[:postgresql][:dir] = "/etc/postgresql/#{node[:postgresql][:version]}/main"
 
 when "ubuntu"
-  # default[:postgresql][:version] = "8.3"
   if platform_version.to_f <= 10.10
     default[:postgresql][:version] = "8.3"
   else
@@ -46,7 +44,6 @@ when "fedora"
     default[:postgresql][:version] = "8.4"
   end
   
-  # default[:postgresql][:version] = "8.3"
   set[:postgresql][:dir] = "/var/lib/pgsql/data"
 
 when "redhat","centos"
@@ -65,7 +62,6 @@ when "suse"
   set[:postgresql][:dir] = "/var/lib/pgsql/data"
 
 else
-  # default[:postgresql][:version] = "8.4"
   default[:postgresql][:version]    = "8.3"
   set[:postgresql][:dir]            = "/etc/postgresql/#{node[:postgresql][:version]}/main"
 end

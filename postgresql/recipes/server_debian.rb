@@ -26,7 +26,7 @@ when "8.4"
   node.default[:postgresql][:ssl] = "true"
 end
 
-package "postgresql-8.3"
+package "postgresql-#{node[:postgresql][:version]}"
 
 service "postgresql" do
   service_name "postgresql-#{node.postgresql.version}"
